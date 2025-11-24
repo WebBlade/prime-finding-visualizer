@@ -4,9 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Primary algorithms</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <nav class="navbar navbar-dark bg-dark mb-3">
+        <h1>🚀 Performance test</h1>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title, mb-3">Налаштування дослідження</h5>
+                        
+                        <label class="form-label">Виберіть алгоритми пошуку (до 3)</label>
+                        <div id="algoList", class="mb-3">
+
+                        </div>
+                        
+                        <label class="form-label">Діапазон пошуку (N)</label>
+                        <div class="input-group mb-3">
+                            <input class="form-control", type="number", min="1000", max="100000000", value="50000">
+                        </div>
+
+                        <button class="btn btn-primary w-100 mb-1 ">Розпочати</button>
+                        <button class="btn btn-light text-muted w-100">Скинути результат</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">cat title</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

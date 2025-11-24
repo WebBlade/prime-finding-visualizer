@@ -2,8 +2,16 @@ body {
     background-color: #f0f2f5; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
 }
 
-.card { border: none; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: transform 0.2s; }
-.card:hover { box-shadow: 0 6px 16px rgba(0,0,0,0.1); }
+h1{
+    color: wheat;
+}
+
+.card { 
+    border: none; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: transform 0.2s; 
+}
+.card:hover { 
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1); 
+}
 
 
 .chart-wrapper { position: relative; height: 50vh; width: 100%;    
@@ -39,10 +47,12 @@ body {
 
 .number-box.active { 
     background-color: #ffc107 !important; color: #000; transform: scale(1.1); z-index: 5; box-shadow: 0 0 8px #ffc107;
- }
-
-.number-box.composite { background-color: #dc3545 !important; color: rgba(255,255,255,0.6); transform: scale(0.9); 
 }
 
-.number-box.prime { background-color: #198754 !important; color: #fff; transform: scale(1.05); box-shadow: 0 0 5px #198754; z-index: 2; 
+.number-box.composite { 
+    background-color: #dc3545 !important; color: rgba(255,255,255,0.6); transform: scale(0.9); 
+}
+
+.number-box.prime { 
+    background-color: #198754 !important; color: #fff; transform: scale(1.05); box-shadow: 0 0 5px #198754; z-index: 2; 
 }
