@@ -6,13 +6,13 @@ const algoFunc = getAlgorithm(algorithm)
 
 try {
 
-    if(!algoFunc[algorithm]){
+    if(!algoFunc){
         throw new Error(`Algorithm ${algorithm} not found`)
     }
 
     const start = performance.now()
 
-    const primes = algoFunc[algorithm](range)
+    const primes = algoFunc(range)
 
     const end = performance.now()
     const duration = (end - start).toFixed(4)

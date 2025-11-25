@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Primary algorithms</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <nav class="navbar navbar-dark bg-dark mb-3">
@@ -16,32 +16,69 @@
         <div class="row">
             <div class="col-4">
                 <div class="card">
-                    <div class="card-body">
+                    <div class="card-header">
                         <h5 class="card-title, mb-3">Налаштування дослідження</h5>
-                        
-                        <label class="form-label">Виберіть алгоритми пошуку (до 3)</label>
-                        <div id="algoList", class="mb-3">
+                    </div>
 
+                    <div class="card-body">
+                        <label class="form-label">Виберіть алгоритми пошуку (макс. 3)</label>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold text-muted small text-uppercase">Додати алгоритм до порівняння</label>
+
+                            <div class="input-group, mb-3">
+                                <input type="text" id="algoSearch" class="form-control" list="algoOptions" placeholder="Пошук по назві" autocomplete="off">
+
+                                <datalist id="algoOptions">
+                                </datalist>
+
+                                <button class="btn btn-outline-primary" id="addAlgorithmBtn" type="button">Додати</button>
+                            </div>
+
+                            <p class="small text-muted mb-1">Обрані алгоритми (макс. 3):</p>
+
+                            <div id="selected-list" class="list-group shadow-sm">
+                                <div class="text-center text-muted p-3 bg-light rounded border border-dashed small">
+                                    Список порожній. Додайте алгоритми вище.
+                                </div>
+                            </div>
+                            
                         </div>
                         
                         <label class="form-label">Діапазон пошуку (N)</label>
                         <div class="input-group mb-3">
-                            <input class="form-control", type="number", min="1000", max="100000000", value="50000">
+                            <input class="form-control", type="number", min="1000", max="100000000", value="50000", id="inputRange">
                         </div>
 
-                        <button class="btn btn-primary w-100 mb-1 ">Розпочати</button>
+                        <button class="btn btn-primary w-100 mb-1", id="startRace">Розпочати</button>
                         <button class="btn btn-light text-muted w-100">Скинути результат</button>
                     </div>
                 </div>
             </div>
             <div class="col-8">
-                <div class="card">
+                <div class="card h-100">
+
+                    <div class="card-header">
+                        <h5>cat title</h5>
+                    </div>
+
                     <div class="card-body">
-                        <h5 class="card-title">cat title</h5>
+                        <div class="chart-wrapper">
+                            <canvas id="raceChart">
+                            </canvas>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script src="./client.js"></script>
 </html>
